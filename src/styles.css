@@ -1,5 +1,4 @@
-@import "tailwindcss" source(none);
-@source "./**/*.{ts,tsx}"
+@import "tailwindcss" source("./**/*.{ts,tsx}");
 
 @custom-variant dark (&:is(.dark *));
 
@@ -197,6 +196,10 @@
 
 @utility animate-fade-up {
   animation: fade-up 0.8s ease both;
+}
+
+@utility text-shadow {
+  text-shadow: 0 8px 20px rgba(0,0,0,0.12);
 }
 
 @keyframes soft-float {

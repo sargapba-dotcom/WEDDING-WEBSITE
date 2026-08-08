@@ -3,6 +3,7 @@ import { Countdown } from '@/components/invitation/Countdown';
 import { Ornament, SectionHeading } from '@/components/invitation/Ornament';
 import heroBg from '@/assets/hero-bg.svg';
 import couple from '@/assets/couple.svg';
+import MusicPlayer from '@/components/ui/MusicPlayer';
 
 const story = [
   {
@@ -16,19 +17,19 @@ const story = [
     body: 'Guided by Allah’s wisdom, both hearts found peace and acceptance in this blessed union.',
   },
   {
-    tag: '8 August 2026',
+    tag: '2 October 2027',
     title: 'The Sacred Nikkah',
-    body: 'With the words of Allah as their bond and their families as witnesses, Thamanna and Muhammed Afeef begin their forever.',
+    body: 'With the words of Allah as their bond and their families as witnesses, Aswathy and Adith begin their forever.',
   },
 ];
 
 export default function Invitation() {
-  const [open, setOpen] = useState(false);
+  const [open, setOpen] = useState(true);
 
   return (
-    <main className="relative min-h-screen overflow-hidden bg-background">
+    <main className="relative min-h-screen overflow-hidden bg-background text-foreground">
       <div
-        className="pointer-events-none fixed inset-0 bg-cover bg-center opacity-70"
+        className="pointer-events-none fixed inset-0 bg-cover bg-center opacity-70 z-0"
         style={{ backgroundImage: `url(${heroBg})` }}
         aria-hidden="true"
       />
@@ -36,11 +37,11 @@ export default function Invitation() {
       {!open && (
         <section className="fixed inset-0 z-50 flex flex-col items-center justify-center px-6 text-center">
           <div
-            className="absolute inset-0 bg-cover bg-center"
+            className="absolute inset-0 bg-cover bg-center z-0"
             style={{ backgroundImage: `url(${heroBg})` }}
             aria-hidden="true"
           />
-          <div className="veil absolute inset-0" aria-hidden="true" />
+          <div className="veil absolute inset-0 z-0" aria-hidden="true" />
           <div className="relative animate-fade-up">
             <p className="text-arabic text-gold text-2xl sm:text-3xl">
               بِسْمِ اللَّهِ الرَّحْمَنِ الرَّحِيمِ
@@ -50,11 +51,14 @@ export default function Invitation() {
               Nikkah Invitation
             </p>
             <h1 className="text-script mt-4 text-4xl leading-tight text-primary-foreground sm:text-6xl">
-              Thamanna &amp; Muhammed Afeef
+              Aswathy &amp; Adith
             </h1>
-            <p className="mt-5 text-sm tracking-[0.4em] text-primary-foreground/80">08 · 08 · 2026</p>
+            <p className="mt-5 text-sm tracking-[0.4em] text-primary-foreground/80">02 · 10 · 2027</p>
             <button
-              onClick={() => setOpen(true)}
+              onClick={() => {
+                window.dispatchEvent(new CustomEvent('wedding:play-music'));
+                setOpen(true);
+              }}
               className="animate-float mt-12 rounded-full border border-gold/70 px-8 py-3 text-[0.65rem] tracking-[0.35em] text-primary-foreground uppercase transition-colors hover:bg-gold/20"
             >
               Tap to open invitation
@@ -64,24 +68,25 @@ export default function Invitation() {
       )}
 
       <div className="relative z-10">
+        <MusicPlayer />
         <section className="relative flex min-h-screen items-center justify-center px-6 text-center">
-          <div className="veil absolute inset-0" aria-hidden="true" />
-          <div className="relative py-24">
+          <div className="veil absolute inset-0 z-0" aria-hidden="true" />
+          <div className="relative py-24 z-20">
             <Ornament label="✦ ✦ ✦" />
-            <p className="text-arabic text-gold text-xl sm:text-2xl">
+            <p className="text-arabic text-gold text-xl sm:text-2xl z-20">
               بِسْمِ اللَّهِ الرَّحْمَنِ الرَّحِيمِ
             </p>
-            <h2 className="text-script mt-8 text-4xl text-primary-foreground sm:text-7xl">
-              Thamanna <span className="text-gold">&amp;</span> Muhammed Afeef
+            <h2 className="text-script mt-8 text-5xl text-foreground sm:text-8xl z-20 text-shadow">
+              Aswathy <span className="text-gold">&amp;</span> Adith
             </h2>
             <p className="mt-6 text-[0.7rem] tracking-[0.4em] text-primary-foreground/80 uppercase">
               are getting married
             </p>
             <p className="mt-6 text-2xl font-light tracking-[0.3em] text-primary-foreground">
-              08 · 08 · 2026
+              02 · 10 · 2027
             </p>
-            <p className="mt-4 text-sm text-primary-foreground/75">
-              Miami Convention Centre · Andikkod
+            <p className="mt-4 text-sm text-primary-foreground">
+              TK Auditorium · Meppayur
             </p>
           </div>
         </section>
@@ -90,8 +95,8 @@ export default function Invitation() {
           <div className="mx-auto max-w-3xl">
             <SectionHeading eyebrow="The Big Day" title="Counting Down to Forever" />
             <Countdown />
-            <p className="mt-8 text-center text-sm text-muted-foreground">
-              8th August 2026 • 5:30 PM • Miami Convention Centre, Andikkod
+            <p className="mt-8 text-center text-sm text-primary-foreground">
+              2nd October 2027 • 5:30 PM • TK Auditorium, Meppayur
             </p>
           </div>
         </section>
@@ -122,29 +127,29 @@ export default function Invitation() {
             <SectionHeading eyebrow="The Blessed Couple" title="Bride & Groom" />
             <img
               src={couple}
-              alt="Illustration of Thamanna and Muhammed Afeef"
+              alt="Illustration of Aswathy and Adith"
               loading="lazy"
               width={1024}
               height={1280}
               className="mx-auto w-64 sm:w-80"
             />
             <p className="text-script mt-4 text-center text-3xl text-primary">
-              Thamanna &amp; Muhammed Afeef
+              Aswathy &amp; Adith
             </p>
             <Ornament />
             <div className="grid gap-6 sm:grid-cols-2">
               {[
                 {
                   side: "Bride's Family",
-                  name: 'Thamanna',
+                  name: 'Aswathy',
                   rel: 'Daughter of',
-                  parents: ['Mr. Eroth Abdu Salam', 'Mrs. Bushra Abdu Salam'],
+                  parents: ['Mr. Suresh', 'Mrs. Anisha'],
                 },
                 {
                   side: "Groom's Family",
-                  name: 'Muhammed Afeef',
+                  name: 'Adith',
                   rel: 'Son of',
-                  parents: ['Mr. Ahammed Kambayathil', 'Mrs. Muneera'],
+                  parents: ['Mr. Suresh', 'Mrs. Anisha'],
                 },
               ].map((person) => (
                 <div key={person.name} className="card-soft rounded-2xl px-6 py-8 text-center">
@@ -176,7 +181,7 @@ export default function Invitation() {
               <dl className="space-y-4 text-sm">
                 <div>
                   <dt className="text-xs tracking-[0.3em] text-muted-foreground uppercase">Date</dt>
-                  <dd className="mt-1 text-lg text-foreground">Saturday, 8 August 2026</dd>
+                  <dd className="mt-1 text-lg text-foreground">Sunday, 2 October 2027</dd>
                 </div>
                 <div>
                   <dt className="text-xs tracking-[0.3em] text-muted-foreground uppercase">Time</dt>
@@ -184,17 +189,40 @@ export default function Invitation() {
                 </div>
                 <div>
                   <dt className="text-xs tracking-[0.3em] text-muted-foreground uppercase">Venue</dt>
-                  <dd className="mt-1 text-lg text-foreground">Miami Convention Centre, Andikkod</dd>
+                  <dd className="mt-1 text-lg text-foreground">TK Auditorium, Meppayur</dd>
                 </div>
               </dl>
               <a
-                href="https://maps.google.com?q=Miami+Convention+Centre+Andikkod"
+                href="https://maps.google.com?q=TK+Auditorium+Meppayur"
                 target="_blank"
                 rel="noreferrer"
                 className="mt-8 inline-block rounded-full bg-primary px-8 py-3 text-[0.65rem] tracking-[0.3em] text-primary-foreground uppercase transition-opacity hover:opacity-90"
               >
                 Open in Google Maps
               </a>
+            </div>
+          </div>
+        </section>
+
+        <section className="bg-background/95 px-6 py-20 backdrop-blur-sm">
+          <div className="mx-auto max-w-3xl">
+            <SectionHeading eyebrow="Get in Touch" title="Contact & RSVP" />
+            <div className="card-soft rounded-3xl p-8 text-left">
+              <p className="text-lg font-medium text-foreground">Please contact us for RSVP and help with directions.</p>
+              <div className="mt-6 space-y-4 text-sm text-muted-foreground">
+                <div>
+                  <p className="text-xs tracking-[0.35em] uppercase text-muted-foreground">Phone</p>
+                  <a href="tel:+918078171887" className="block mt-1 text-base text-primary-foreground underline">
+                    +91 80781 71887
+                  </a>
+                </div>
+                <div>
+                  <p className="text-xs tracking-[0.35em] uppercase text-muted-foreground">WhatsApp</p>
+                  <a href="https://wa.me/918078171887" target="_blank" rel="noreferrer" className="block mt-1 text-base text-primary-foreground underline">
+                    +91 80781 71887
+                  </a>
+                </div>
+              </div>
             </div>
           </div>
         </section>
@@ -223,6 +251,9 @@ export default function Invitation() {
           </p>
           <p className="mt-2 text-xs tracking-[0.3em] text-primary-foreground/60 uppercase">
             Surah Ar-Rum, 30:21
+          </p>
+          <p className="mt-4 text-[0.75rem] text-muted-foreground">
+            Created by <a href="https://example.com" target="_blank" rel="noreferrer" className="text-primary underline">Wedding Invitation Team</a>
           </p>
         </footer>
       </div>
