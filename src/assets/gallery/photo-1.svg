@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 1500" role="img" aria-labelledby="title desc">
+  <title id="title">Gallery placeholder 1</title>
+  <desc id="desc">Lavender themed photo placeholder with a soft frame and add photo text.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0%" stop-color="#f8f1fa"/>
+      <stop offset="55%" stop-color="#ebd8f1"/>
+      <stop offset="100%" stop-color="#dcc2e8"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="50%" cy="38%" r="65%">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity=".92"/>
+      <stop offset="70%" stop-color="#ffffff" stop-opacity=".15"/>
+      <stop offset="100%" stop-color="#ffffff" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect width="1200" height="1500" fill="url(#bg)"/>
+  <rect width="1200" height="1500" fill="url(#glow)"/>
+  <g fill="none" stroke="#9b5fb5" stroke-opacity=".24">
+    <path d="M80 350 C240 240 360 220 520 300" stroke-width="12" stroke-linecap="round"/>
+    <path d="M1180 1060 C1030 1170 900 1200 740 1130" stroke-width="12" stroke-linecap="round"/>
+  </g>
+  <g transform="translate(600 675)">
+    <circle r="88" fill="#fff" fill-opacity=".65"/>
+    <path d="M-58 36h116c12 0 21-10 19-22l-14-76c-2-11-12-18-23-18h-18l-17-24c-3-5-9-8-15-8h-20c-6 0-12 3-15 8l-17 24h-18c-11 0-21 7-23 18l-14 76c-2 12 7 22 19 22z" fill="none" stroke="#8b4fa4" stroke-width="10" stroke-linejoin="round"/>
+    <circle cx="0" cy="-4" r="24" fill="none" stroke="#8b4fa4" stroke-width="10"/>
+    <path d="M-24 38l28-26 18 18 22-18 22 26" fill="none" stroke="#8b4fa4" stroke-width="10" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+  <text x="600" y="910" text-anchor="middle" font-family="Georgia, serif" font-size="54" letter-spacing="8" fill="#7b4a90" fill-opacity=".7">ADD PHOTO</text>
+  <text x="600" y="980" text-anchor="middle" font-family="Arial, sans-serif" font-size="24" letter-spacing="6" fill="#7b4a90" fill-opacity=".56">PLACEHOLDER</text>
+</svg>

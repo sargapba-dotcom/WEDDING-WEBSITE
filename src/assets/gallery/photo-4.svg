@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 1500" role="img" aria-labelledby="title desc">
+  <title id="title">Gallery placeholder 4</title>
+  <desc id="desc">Lavender themed photo placeholder with a soft frame and add photo text.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" x2="1" y1="0" y2="0">
+      <stop offset="0%" stop-color="#f8f1fa"/>
+      <stop offset="55%" stop-color="#e8d2f0"/>
+      <stop offset="100%" stop-color="#d7bce4"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="1500" fill="url(#bg)"/>
+  <g opacity=".22" fill="#fff">
+    <circle cx="180" cy="1080" r="110"/>
+    <circle cx="1020" cy="170" r="90"/>
+  </g>
+  <g transform="translate(600 675)">
+    <rect x="-138" y="-126" width="276" height="252" rx="38" fill="#fff" fill-opacity=".48"/>
+    <path d="M-70 40h140c12 0 22-10 20-22l-14-78c-2-11-13-19-24-19h-18l-17-23c-3-5-9-8-15-8h-21c-6 0-12 3-15 8l-17 23h-18c-11 0-22 8-24 19l-14 78c-2 12 8 22 20 22z" fill="none" stroke="#7c4a95" stroke-width="10" stroke-linejoin="round"/>
+    <circle cx="0" cy="-2" r="26" fill="none" stroke="#7c4a95" stroke-width="10"/>
+  </g>
+  <text x="600" y="930" text-anchor="middle" font-family="Georgia, serif" font-size="52" letter-spacing="7" fill="#7b4a90" fill-opacity=".72">ADD PHOTO</text>
+</svg>
