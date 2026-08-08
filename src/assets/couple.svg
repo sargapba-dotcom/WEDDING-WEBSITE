@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 800" preserveAspectRatio="xMidYMid meet">
+  <rect width="640" height="800" fill="#fdf6e3" />
+  <circle cx="210" cy="240" r="70" fill="#f6d8b9" />
+  <circle cx="430" cy="240" r="70" fill="#f6d8b9" />
+  <path d="M120 520c60-220 160-220 220 0c40 140 120 140 180 0" fill="#8d5534" opacity="0.2" />
+  <path d="M190 250c0 40-20 70-40 70s-40-30-40-70 20-70 40-70 40 30 40 70z" fill="#f6d8b9" />
+  <path d="M410 250c0 40-20 70-40 70s-40-30-40-70 20-70 40-70 40 30 40 70z" fill="#f6d8b9" />
+  <path d="M140 550c70 10 140 20 220 0s120-40 180-15" fill="#f8c1a3" opacity="0.2" />
+</svg>
