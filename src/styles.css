@@ -353,16 +353,16 @@ button {
   z-index: 12;
   margin: 1.5rem auto 0;
   width: min(88vw, 340px);
-  max-width: calc((100svh - 25rem) * 0.62);
-  aspect-ratio: 451 / 724;
+  max-width: calc((100svh - 25rem) * 0.784);
+  aspect-ratio: 381 / 486;
   overflow: hidden;
 }
 
 .splash-couple {
   position: absolute;
-  left: -32.59%;
-  top: -80.66%;
-  width: 163.19%;
+  left: -13.12%;
+  top: -7.61%;
+  width: 125.2%;
   max-width: none;
   height: auto;
   margin: 0;
@@ -753,7 +753,7 @@ button {
   position: relative;
   margin: 1.4rem auto 0;
   width: min(72vw, 340px);
-  aspect-ratio: 451 / 724;
+  aspect-ratio: 381 / 486;
   overflow: hidden;
   border-radius: 2rem;
   box-shadow: 0 18px 40px -26px rgba(113, 53, 141, 0.28);
@@ -761,9 +761,9 @@ button {
 
 .couple-portrait {
   position: absolute;
-  left: -32.59%;
-  top: -80.66%;
-  width: 163.19%;
+  left: -13.12%;
+  top: -7.61%;
+  width: 125.2%;
   max-width: none;
   height: auto;
   margin: 0;
@@ -1010,16 +1010,16 @@ button {
   position: relative;
   margin: 1.5rem auto 0;
   width: min(100%, 26rem);
-  aspect-ratio: 451 / 724;
+  aspect-ratio: 381 / 486;
   overflow: hidden;
   border-radius: 1.6rem;
 }
 
 .story-image {
   position: absolute;
-  left: -32.59%;
-  top: -80.66%;
-  width: 163.19%;
+  left: -13.12%;
+  top: -7.61%;
+  width: 125.2%;
   max-width: none;
   height: auto;
   margin: 0;
@@ -1129,7 +1129,7 @@ button {
 
   .splash-couple-wrap {
     width: min(88vw, 400px);
-    max-width: calc((100svh - 24rem) * 0.62);
+    max-width: calc((100svh - 24rem) * 0.784);
   }
 
   .welcome-strip {
@@ -1185,7 +1185,7 @@ button {
 
   .splash-couple-wrap {
     width: min(88vw, 340px);
-    max-width: calc((100svh - 25rem) * 0.62);
+    max-width: calc((100svh - 25rem) * 0.784);
   }
 
   .splash-open-button {

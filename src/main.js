@@ -1,5 +1,5 @@
 import './styles.css';
-import couplePhoto from './assets/couple.png';
+import couplePhoto from './assets/couplead.png';
 import lavenderFrame from './assets/Lavender frame.png';
 import lavenderField from './assets/Lavender field.png';
 import lavenderFieldFaded from './assets/faded lavender field.png';
