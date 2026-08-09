@@ -360,23 +360,18 @@ button {
 
 .splash-couple {
   position: absolute;
-  left: -13.12%;
-  top: -7.61%;
-  width: 125.2%;
-  max-width: none;
-  height: auto;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center top;
   margin: 0;
-  transform: none;
 }
 
 .is-leaving {
   opacity: 0;
   transition: opacity 500ms ease;
   pointer-events: none;
-}
-
-.invitation-shell {
-  display: block;
 }
 
 .invitation-main {
@@ -761,11 +756,11 @@ button {
 
 .couple-portrait {
   position: absolute;
-  left: -13.12%;
-  top: -7.61%;
-  width: 125.2%;
-  max-width: none;
-  height: auto;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center top;
   margin: 0;
 }
 
@@ -1017,11 +1012,11 @@ button {
 
 .story-image {
   position: absolute;
-  left: -13.12%;
-  top: -7.61%;
-  width: 125.2%;
-  max-width: none;
-  height: auto;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center top;
   margin: 0;
 }
 
@@ -1086,15 +1081,6 @@ button {
 
 .music-fab:hover {
   transform: scale(1.04);
-}
-
-.music-icon {
-  display: none;
-}
-
-.music-fab[data-playing="false"] .music-icon-play,
-.music-fab[data-playing="true"] .music-icon-pause {
-  display: block;
 }
 
 .music-toast {
