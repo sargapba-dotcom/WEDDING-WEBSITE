@@ -4,10 +4,6 @@ import lavenderFrame from './assets/Lavender frame.png';
 import lavenderField from './assets/Lavender field.png';
 import lavenderFieldFaded from './assets/faded lavender field.png';
 import mangalyamDecoration from './assets/mangalyam.png';
-import galleryPhoto1 from './assets/gallery/photo-1.svg';
-import galleryPhoto2 from './assets/gallery/photo-2.svg';
-import galleryPhoto3 from './assets/gallery/photo-3.svg';
-import galleryPhoto4 from './assets/gallery/photo-4.svg';
 import musicFile from './assets/Sita Kalyanam Lyric Video - Solo Dulquer Salmaan, Neha Sharma, Bejoy Nambiar Trend Music - TrendMusic (128k).mp3';
 
 const wedding = {
@@ -70,10 +66,10 @@ const events = [
 ];
 
 const galleryItems = [
-  { label: 'PHOTO 1', src: galleryPhoto1 },
-  { label: 'PHOTO 2', src: galleryPhoto2 },
-  { label: 'PHOTO 3', src: galleryPhoto3 },
-  { label: 'PHOTO 4', src: galleryPhoto4 },
+  { label: 'PHOTO 1', src: '' },
+  { label: 'PHOTO 2', src: '' },
+  { label: 'PHOTO 3', src: '' },
+  { label: 'PHOTO 4', src: '' },
 ];
 
 const countdownLabels = ['Days', 'Hours', 'Minutes', 'Seconds'];
@@ -96,20 +92,28 @@ function countdownMarkup() {
 function galleryMarkup() {
   return `
     <div class="gallery-grid">
-      <button class="gallery-slot gallery-slot-featured gallery-trigger reveal-target" type="button" data-gallery-open data-gallery-src="${galleryItems[0].src}" data-gallery-alt="${galleryItems[0].label}" data-reveal style="--stagger: 0ms">
-        <img src="${galleryItems[0].src}" alt="${galleryItems[0].label}" class="gallery-image" loading="lazy" />
-      </button>
-      <div class="gallery-row">
-        <button class="gallery-slot gallery-slot-small gallery-trigger reveal-target" type="button" data-gallery-open data-gallery-src="${galleryItems[1].src}" data-gallery-alt="${galleryItems[1].label}" data-reveal style="--stagger: 120ms">
-          <img src="${galleryItems[1].src}" alt="${galleryItems[1].label}" class="gallery-image" loading="lazy" />
-        </button>
-        <button class="gallery-slot gallery-slot-small gallery-trigger reveal-target" type="button" data-gallery-open data-gallery-src="${galleryItems[2].src}" data-gallery-alt="${galleryItems[2].label}" data-reveal style="--stagger: 240ms">
-          <img src="${galleryItems[2].src}" alt="${galleryItems[2].label}" class="gallery-image" loading="lazy" />
-        </button>
+      <div class="gallery-slot gallery-slot-featured is-empty reveal-target" data-reveal style="--stagger: 0ms">
+        <div class="gallery-placeholder-frame">
+          <span class="gallery-placeholder-label">${galleryItems[0].label}</span>
+        </div>
       </div>
-      <button class="gallery-slot gallery-slot-featured gallery-trigger reveal-target" type="button" data-gallery-open data-gallery-src="${galleryItems[3].src}" data-gallery-alt="${galleryItems[3].label}" data-reveal style="--stagger: 360ms">
-        <img src="${galleryItems[3].src}" alt="${galleryItems[3].label}" class="gallery-image" loading="lazy" />
-      </button>
+      <div class="gallery-row">
+        <div class="gallery-slot gallery-slot-small is-empty reveal-target" data-reveal style="--stagger: 120ms">
+          <div class="gallery-placeholder-frame">
+            <span class="gallery-placeholder-label">${galleryItems[1].label}</span>
+          </div>
+        </div>
+        <div class="gallery-slot gallery-slot-small is-empty reveal-target" data-reveal style="--stagger: 240ms">
+          <div class="gallery-placeholder-frame">
+            <span class="gallery-placeholder-label">${galleryItems[2].label}</span>
+          </div>
+        </div>
+      </div>
+      <div class="gallery-slot gallery-slot-featured is-empty reveal-target" data-reveal style="--stagger: 360ms">
+        <div class="gallery-placeholder-frame">
+          <span class="gallery-placeholder-label">${galleryItems[3].label}</span>
+        </div>
+      </div>
     </div>
   `;
 }
@@ -121,7 +125,9 @@ function storyMarkup() {
         item.id === 'wedding'
           ? `
             <img src="${mangalyamDecoration}" alt="Ceremonial emblem" class="story-emblem" />
-            <img src="${item.image}" alt="${item.title}" class="story-image" loading="lazy" />
+            <div class="story-image-wrap">
+              <img src="${item.image}" alt="${item.title}" class="story-image" loading="lazy" />
+            </div>
           `
           : '';
 
@@ -194,15 +200,13 @@ const splashMarkup = `
         <p class="splash-location hero-load-in" style="--delay: 750ms">${wedding.venue} &middot; ${wedding.location}</p>
         <button class="splash-open-button hero-load-in pulse-button" type="button" data-open style="--delay: 900ms">Tap to open invitation</button>
       </div>
-      <div class="splash-couple-layer">
-        <div class="splash-couple-wrap">
-          <img
-            src="${couplePhoto}"
-            alt="Portrait of ${wedding.couple.bride} and ${wedding.couple.groom}"
-            class="splash-couple"
-            loading="eager"
-          />
-        </div>
+      <div class="splash-couple-wrap">
+        <img
+          src="${couplePhoto}"
+          alt="Portrait of ${wedding.couple.bride} and ${wedding.couple.groom}"
+          class="splash-couple"
+          loading="eager"
+        />
       </div>
     </section>
   </section>
@@ -253,6 +257,7 @@ const invitationMarkup = `
             </div>
           </header>
           <div class="section-card invitation-card reveal-target" data-reveal style="--stagger: 0ms">
+            <img src="${mangalyamDecoration}" alt="" class="invitation-emblem" aria-hidden="true" />
             <p class="verse-text">And He created for you mates from yourselves so that you may find tranquility in them.</p>
             <div class="ornament" aria-hidden="true">
               <span class="gold-rule"></span>

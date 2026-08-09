@@ -270,7 +270,8 @@ button {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 1.2rem 1.2rem clamp(9.5rem, 30vh, 13rem);
+  justify-content: flex-start;
+  padding: 1.2rem 1.2rem 2.5rem;
   text-align: center;
 }
 
@@ -347,26 +348,25 @@ button {
   backdrop-filter: blur(12px);
 }
 
-.splash-couple-layer {
-  position: absolute;
-  inset: 0 0 0 0;
-  display: flex;
-  align-items: flex-end;
-  justify-content: center;
-  pointer-events: none;
-  z-index: 10;
-}
-
 .splash-couple-wrap {
-  width: 100%;
-  max-width: 34rem;
+  position: relative;
+  z-index: 12;
+  margin: 1.5rem auto 0;
+  width: min(88vw, 340px);
+  max-width: calc((100svh - 25rem) * 0.62);
+  aspect-ratio: 451 / 724;
+  overflow: hidden;
 }
 
 .splash-couple {
-  width: min(96vw, 360px);
-  margin: 0 auto;
-  transform: translateY(1.4rem);
-  object-fit: contain;
+  position: absolute;
+  left: -32.59%;
+  top: -80.66%;
+  width: 163.19%;
+  max-width: none;
+  height: auto;
+  margin: 0;
+  transform: none;
 }
 
 .is-leaving {
@@ -632,6 +632,12 @@ button {
   padding: 1.5rem;
 }
 
+.invitation-emblem {
+  width: 4.25rem;
+  margin: 0 auto 1.1rem;
+  opacity: 0.9;
+}
+
 .verse-text {
   margin: 0;
   font-size: clamp(1rem, 4vw, 1.5rem);
@@ -676,17 +682,18 @@ button {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  width: clamp(48px, 14vw, 56px);
-  min-height: 5.25rem;
+  width: clamp(52px, 15vw, 62px);
+  min-height: 5.75rem;
   margin: 0 auto;
-  padding: 0.9rem 0.75rem;
+  padding: 0.9rem 0.5rem;
   border: 1px solid rgba(155, 95, 181, 0.12);
   border-radius: 1.5rem;
   background: #fff;
 }
 
 .countdown-number {
-  font-size: clamp(1.18rem, 5.5vw, 1.42rem);
+  font-size: clamp(1.55rem, 6.8vw, 1.85rem);
+  font-weight: 500;
   font-variant-numeric: tabular-nums;
   color: var(--primary);
 }
@@ -743,13 +750,23 @@ button {
 }
 
 .bridegroom-portrait {
-  margin-top: 1rem;
+  position: relative;
+  margin: 1.4rem auto 0;
+  width: min(72vw, 340px);
+  aspect-ratio: 451 / 724;
+  overflow: hidden;
+  border-radius: 2rem;
+  box-shadow: 0 18px 40px -26px rgba(113, 53, 141, 0.28);
 }
 
 .couple-portrait {
-  width: min(72vw, 28rem);
-  margin: 0 auto;
-  object-fit: contain;
+  position: absolute;
+  left: -32.59%;
+  top: -80.66%;
+  width: 163.19%;
+  max-width: none;
+  height: auto;
+  margin: 0;
 }
 
 .story-name {
@@ -849,7 +866,7 @@ button {
 }
 
 .gallery-title {
-  font-size: clamp(1.8rem, 6vw, 3rem);
+  font-size: clamp(1.55rem, 5.5vw, 2.3rem);
 }
 
 .gallery-heading-divider {
@@ -884,12 +901,10 @@ button {
 
 .gallery-slot-featured {
   aspect-ratio: 4 / 5;
-  min-height: 19rem;
 }
 
 .gallery-slot-small {
   aspect-ratio: 1 / 1;
-  min-height: 15rem;
 }
 
 .gallery-slot::before {
@@ -991,12 +1006,23 @@ button {
   opacity: 0.92;
 }
 
-.story-image {
-  width: 100%;
-  margin: 1.4rem auto 0;
+.story-image-wrap {
+  position: relative;
+  margin: 1.5rem auto 0;
+  width: min(100%, 26rem);
+  aspect-ratio: 451 / 724;
+  overflow: hidden;
   border-radius: 1.6rem;
-  aspect-ratio: 4 / 5;
-  object-fit: cover;
+}
+
+.story-image {
+  position: absolute;
+  left: -32.59%;
+  top: -80.66%;
+  width: 163.19%;
+  max-width: none;
+  height: auto;
+  margin: 0;
 }
 
 .final-lavender {
@@ -1012,7 +1038,7 @@ button {
 .final-overlay {
   position: absolute;
   inset: 0;
-  background: linear-gradient(180deg, rgba(252, 248, 244, 0.94), rgba(243, 231, 244, 0.92) 30%, rgba(238, 224, 241, 0.78) 64%, rgba(232, 215, 238, 0.9));
+  background: linear-gradient(180deg, rgba(252, 248, 244, 0.72), rgba(243, 231, 244, 0.62) 30%, rgba(238, 224, 241, 0.48) 64%, rgba(232, 215, 238, 0.7));
 }
 
 .final-lavender .section-inner {
@@ -1098,12 +1124,12 @@ button {
 
 @media (min-width: 640px) {
   .splash-stage {
-    padding-bottom: clamp(11rem, 28vh, 17rem);
+    padding-bottom: 2.5rem;
   }
 
-  .splash-couple {
-    width: min(92vw, 440px);
-    transform: translateY(1rem);
+  .splash-couple-wrap {
+    width: min(88vw, 400px);
+    max-width: calc((100svh - 24rem) * 0.62);
   }
 
   .welcome-strip {
@@ -1154,13 +1180,12 @@ button {
 
 @media (max-width: 640px) {
   .splash-stage {
-    padding-bottom: clamp(9.5rem, 30vh, 13rem);
+    padding-bottom: 2.5rem;
   }
 
-  .splash-couple {
-    width: min(96vw, 360px);
-    margin-bottom: -0.45rem;
-    transform: translateY(1.4rem);
+  .splash-couple-wrap {
+    width: min(88vw, 340px);
+    max-width: calc((100svh - 25rem) * 0.62);
   }
 
   .splash-open-button {
@@ -1181,23 +1206,12 @@ button {
     gap: 0.35rem;
   }
 
-  .gallery-title {
-    max-width: 13.5rem;
-    margin-inline: auto;
-  }
-
   .gallery-grid {
-    max-width: 13.5rem;
-    margin-inline: auto;
     gap: 0.9rem;
   }
 
-  .gallery-slot-featured {
-    min-height: 17.5rem;
-  }
-
-  .gallery-slot-small {
-    min-height: 11rem;
+  .gallery-row {
+    gap: 0.75rem;
   }
 
   .final-decorative {
